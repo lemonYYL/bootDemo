@@ -1,0 +1,23 @@
+#配置demo的值
+server:
+  port: 8080
+
+#spring:
+#  profiles:
+#    active: prod  #指定使用哪个环境
+#logging:
+#  file:
+#    name: springBootDemo.log
+---
+server:
+  port: 8081
+
+spring:
+  profiles: dev
+---
+server:
+  port: 8082
+
+spring:
+  profiles: prod #指定属于哪个环境
+
