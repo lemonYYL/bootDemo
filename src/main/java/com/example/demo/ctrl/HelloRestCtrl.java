@@ -5,12 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -49,25 +45,5 @@ public class HelloRestCtrl {
     public String publishMsg(){
         rmqPublishService.publish();
         return "success";
-    }
-
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@PathVariable("name") String name,@PathVariable("password") String password) {
-        if (name.equals("lll") || "123456".equals(password)){
-            return "success";
-        }else {
-            return "login";
-        }
-    }
-
-
-    @RequestMapping("/")
-    public void index(HttpServletResponse response) {
-        try {
-            response.sendRedirect("login.html");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 }
