@@ -41,6 +41,10 @@ public class HelloRestCtrl {
         return "success";
     }
 
+    /**
+     * 测试代码提交
+     * @return
+     */
     @RequestMapping(value = "publish")
     public String publishMsg(){
         rmqPublishService.publish();
