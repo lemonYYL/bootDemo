@@ -56,4 +56,10 @@ public class HelloRestCtrl {
         System.out.println("测试提交");
         return "success";
     }
+
+    @RequestMapping(value = "testCommit1")
+    public String testCommit1(){
+        System.out.println("测试提交");
+        return "success";
+    }
 }
