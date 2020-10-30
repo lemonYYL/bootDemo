@@ -50,4 +50,10 @@ public class HelloRestCtrl {
         rmqPublishService.publish();
         return "success";
     }
+
+    @RequestMapping(value = "testCommit")
+    public String testCommit(){
+        System.out.println("测试提交");
+        return "success";
+    }
 }
