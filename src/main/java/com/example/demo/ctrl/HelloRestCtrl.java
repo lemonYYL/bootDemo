@@ -42,7 +42,7 @@ public class HelloRestCtrl {
     }
 
     /**
-     * 测试代码提交
+     * 测试代码提交  测试提交
      * @return
      */
     @RequestMapping(value = "publish")
